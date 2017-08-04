@@ -6,8 +6,13 @@
 //  Copyright © 2017年 lichao. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
-@interface LCLevelIntervalView : NSObject
+@interface LCLevelIntervalView : UIView
+@property (nonatomic, assign) BOOL showing;
+
+- (void)showInView:(UIView *)view;
+- (void)dismiss;
 
 @end
+
