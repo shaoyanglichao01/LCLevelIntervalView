@@ -41,10 +41,8 @@
   
   [view addSubview:self];
   
-  [UIView animateWithDuration:.3
-                   animations:^{
-                     self.frame = CGRectMake(0, [UIScreen mainScreen].bounds.size.height-200, self.bounds.size.width, 200);
-                   }];
+  self.frame = CGRectMake(100, 200, [UIScreen mainScreen].bounds.size.width-200, 300);
+  
   self.showing = YES;
 }
 
@@ -55,10 +53,9 @@
   
   self.maskView.enabled = NO;
   
-  [UIView animateWithDuration:.3
-                   animations:^{
-                     self.frame = CGRectMake(0, [UIScreen mainScreen].bounds.size.height, self.bounds.size.width, 200);
-                   }];
+  [self.maskView removeFromSuperview];
+  self.maskView = nil;
+  [self removeFromSuperview];
   self.showing = NO;
 }
 
