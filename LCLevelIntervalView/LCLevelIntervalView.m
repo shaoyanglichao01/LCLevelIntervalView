@@ -8,6 +8,9 @@
 
 #import "LCLevelIntervalView.h"
 
+#define OPTScreenWidth [UIScreen mainScreen].bounds.size.width
+#define OPTScreenHeight [UIScreen mainScreen].bounds.size.height
+
 @interface LCLevelIntervalView()
 
 @property (nonatomic, strong) UIButton *maskView;
@@ -19,6 +22,8 @@
   self = [super initWithFrame:frame];
   if (self) {
     self.backgroundColor = [UIColor whiteColor];
+    self.layer.cornerRadius = 5.0;
+    self.layer.masksToBounds = YES;
   }
   return self;
 }
@@ -39,9 +44,13 @@
   [view addSubview:self.maskView];
   self.maskView.frame = view.bounds;
   
+  self.frame = CGRectMake(20, OPTScreenHeight, OPTScreenWidth-40, 300);
   [view addSubview:self];
+  [view layoutIfNeeded];
   
-  self.frame = CGRectMake(100, 200, [UIScreen mainScreen].bounds.size.width-200, 300);
+  [UIView animateWithDuration:.3 animations:^{
+    self.center = CGPointMake(OPTScreenWidth/2.0, OPTScreenHeight/2.0);
+  }];
   
   self.showing = YES;
 }
