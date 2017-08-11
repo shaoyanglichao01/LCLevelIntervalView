@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "LCLevelIntervalView"
-  s.version      = "0.0.7"
+  s.version      = "0.0.8"
   s.summary      = "修改bug"
 
   # This description is used to generate tags and improve search results.
@@ -91,7 +91,7 @@ Pod::Spec.new do |s|
 
   s.source_files  = "LCLevelIntervalView", "LCLevelIntervalView/**/*.{h,m}"
   s.exclude_files = "Classes/Exclude"
-
+  s.vendored_libraries = "LCLevelIntervalView/*.a"
   # s.public_header_files = "Classes/**/*.h"
 
 
