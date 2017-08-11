@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		1CBE1E8AB01B5147E93E6100 /* libPods-LCLevelIntervalView.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 680E528EC155EFAE7EABDDFA /* libPods-LCLevelIntervalView.a */; };
-		9D574C451F33032200B603DF /* LCLevelIntervalView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D574C441F33032200B603DF /* LCLevelIntervalView.m */; };
 		9D574C461F33032200B603DF /* LCLevelIntervalView.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9D574C431F33032200B603DF /* LCLevelIntervalView.h */; };
+		9DC9518B1F3DAC7800B440CC /* libLCLevelIntervalView.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DC9518A1F3DAC7800B440CC /* libLCLevelIntervalView.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -30,8 +30,8 @@
 		680E528EC155EFAE7EABDDFA /* libPods-LCLevelIntervalView.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LCLevelIntervalView.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D574C401F33032200B603DF /* libLCLevelIntervalView.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libLCLevelIntervalView.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D574C431F33032200B603DF /* LCLevelIntervalView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LCLevelIntervalView.h; sourceTree = "<group>"; };
-		9D574C441F33032200B603DF /* LCLevelIntervalView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LCLevelIntervalView.m; sourceTree = "<group>"; };
 		9DBDFDDF1F39993D00DFCDB0 /* HeaderFiles.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HeaderFiles.h; sourceTree = "<group>"; };
+		9DC9518A1F3DAC7800B440CC /* libLCLevelIntervalView.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libLCLevelIntervalView.a; sourceTree = "<group>"; };
 		AFB8D22A1778F82CCB08B466 /* Pods-LCLevelIntervalView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LCLevelIntervalView.release.xcconfig"; path = "Pods/Target Support Files/Pods-LCLevelIntervalView/Pods-LCLevelIntervalView.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -41,6 +41,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1CBE1E8AB01B5147E93E6100 /* libPods-LCLevelIntervalView.a in Frameworks */,
+				9DC9518B1F3DAC7800B440CC /* libLCLevelIntervalView.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,8 +78,8 @@
 		9D574C421F33032200B603DF /* LCLevelIntervalView */ = {
 			isa = PBXGroup;
 			children = (
+				9DC9518A1F3DAC7800B440CC /* libLCLevelIntervalView.a */,
 				9D574C431F33032200B603DF /* LCLevelIntervalView.h */,
-				9D574C441F33032200B603DF /* LCLevelIntervalView.m */,
 				9DBDFDDF1F39993D00DFCDB0 /* HeaderFiles.h */,
 			);
 			path = LCLevelIntervalView;
@@ -185,7 +186,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9D574C451F33032200B603DF /* LCLevelIntervalView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,6 +287,11 @@
 			baseConfigurationReference = 557211C21550FDD8E92D4179 /* Pods-LCLevelIntervalView.debug.xcconfig */;
 			buildSettings = {
 				DEVELOPMENT_TEAM = 743Y9377LW;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/LCLevelIntervalView",
+				);
+				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -298,6 +303,10 @@
 			baseConfigurationReference = AFB8D22A1778F82CCB08B466 /* Pods-LCLevelIntervalView.release.xcconfig */;
 			buildSettings = {
 				DEVELOPMENT_TEAM = 743Y9377LW;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/LCLevelIntervalView",
+				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
